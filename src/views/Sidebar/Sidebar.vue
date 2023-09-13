@@ -7,10 +7,10 @@
 				<ul>
 					<li class=""><RouterLink to='/'>Home</RouterLink></li> 
 					<li><RouterLink to="/Project">Project</RouterLink> </li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="services.html">Services</a></li>
-					<li><a href="blog.html">Blog</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><RouterLink to="/About">About</RouterLink></li>
+					<li><RouterLink to="/Service">Services</RouterLink></li>
+					<li><RouterLink to="/Blog">Blog</RouterLink></li>
+					<li><RouterLink to="/Contact">Contact</RouterLink></li>
 				</ul>
 			</nav>
 

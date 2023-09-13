@@ -1,11 +1,11 @@
 <script>
 import { RouterView } from 'vue-router';
-import SidebarView from './views/Sidebar/Sidebar.vue';
+//import SidebarView from './views/Sidebar/Sidebar.vue';
 
 
 export default {
   components: {
-    SidebarView,
+    //SidebarView,
     RouterView
 
   
@@ -16,7 +16,6 @@ export default {
 
 <template>
   <div id="colorlib-page">
-    <SidebarView/>
     <RouterView />
   </div>
   

@@ -273,7 +273,7 @@ figure {
       display: none; }
     #colorlib-hero .flexslider .slider-text {
       display: table;
-      opacity: 0;
+      opacity: 1;
       min-height: 500px;
       z-index: 9; }
       #colorlib-hero .flexslider .slider-text > .slider-text-inner {
