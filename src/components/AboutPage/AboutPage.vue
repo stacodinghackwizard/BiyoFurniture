@@ -1,8 +1,9 @@
 <template>
     <div>
         
-        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+        <a href="#" class="colorlib-nav-toggle" @click="navToggle"><i></i></a>
         <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+            <a class="bg-primary removeDiv" style="padding:10px; position:absolute; top:5px; right:5px; font-size:20px" @click="removeDiv">X</a>
             <h1 id="colorlib-logo"><RouterLink to="/">Biyo <br> Funiture</RouterLink></h1>
             <nav id="colorlib-main-menu" role="navigation">
                 <ul>
@@ -185,5 +186,19 @@
 <script>
 export default {
     name: 'AboutPage',
-}
+
+    data(){
+            return{
+                isVisible: false,
+            }
+        },
+        methods: {
+            navToggle(){   
+                document.getElementById("colorlib-aside").classList.add("active");
+            },
+            removeDiv(){
+                document.getElementById("colorlib-aside").classList.remove("active");
+            }
+        }
+    }
 </script>

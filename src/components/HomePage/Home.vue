@@ -1,8 +1,8 @@
 <template>
     <div>
-        
-        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+        <a href="#" class="colorlib-nav-toggle" @click="navToggle"><i></i></a>
         <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+            <a class="bg-primary removeDiv" style="padding:10px; position:absolute; top:5px; right:5px; font-size:20px" @click="removeDiv">X</a>
             <h1 id="colorlib-logo"><RouterLink to="/">Biyo <br> Funiture</RouterLink></h1>
             <nav id="colorlib-main-menu" role="navigation">
                 <ul>
@@ -26,13 +26,14 @@
             </div>
 
         </aside>
+        
     
    
         <div id="colorlib-main">
             <aside id="colorlib-hero" class="js-fullheight">
                 <div class="flexslider js-fullheight">
-                    <ul class="slides">
-                    <li style="background-image: url(img_bg_1.jpg);">
+                    
+                    <div style="background-image: url(img_bg_1.jpg); hight: 100vh; width: 100%; object-fit:cover;">
                         <div class="overlay"></div>
                         <div class="container-fluid">
                             <div class="row" style="opacity:0;">
@@ -47,7 +48,8 @@
                                 </div>
                             </div>
                         </div>
-                    </li>
+                    </div>
+                    <!--
                     <li style="background-image: url(img_bg_2.jpg);">
                         <div class="overlay"></div>
                         <div class="container-fluid">
@@ -79,8 +81,8 @@
                                 </div>
                             </div>
                         </div>
-                    </li>
-                    </ul>
+                    </li>-->
+                    
                 </div>
             </aside>
 
@@ -93,7 +95,7 @@
                         </div>
                         <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
                             <div class="about-desc">
-                                <span class="heading-meta">Welcome</span>
+                                <span class="heading-meta text-">Welcome</span>
                                 <h2 class="colorlib-heading">Who we are</h2>
                                 <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country.</p>
                                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
@@ -416,7 +418,26 @@
 </template>
 
 <script>
+    
     export default {
-        name: 'HomePageView'
+        name: 'HomePageView',
+        
+        data(){
+            return{
+                
+                
+            }
+        },
+        methods: {
+            
+            navToggle(){   
+                document.getElementById("colorlib-aside").classList.add("active");
+            },
+            removeDiv(){
+                document.getElementById("colorlib-aside").classList.remove("active");
+            }
+            
+        }
     }
+    
 </script>

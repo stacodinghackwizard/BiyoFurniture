@@ -6,6 +6,11 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 
+
+
+
+
+
 import './assets/css/animate.css'
 import './assets/css/icomoon.css'
 import './assets/css/bootstrap.css'
